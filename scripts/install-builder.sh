@@ -46,9 +46,9 @@ make install
 
 # Download and extract OPAM
 cd ${ROOTDIR}
-git clone git@github.com:ocaml/opam
+git clone https://github.com/ocaml/opam.git
 cd ${ROOTDIR}/opam
-git remote add ${OPAM_DEV} git@github.com:${OPAM_DEV}/opam
+git remote add ${OPAM_DEV} https://github.com/${OPAM_DEV}/opam
 git fetch ${OPAM_DEV}
 git checkout -b ${OPAM_BRANCH} --track ${OPAM_DEV}/${OPAM_BRANCH}
 cd ..
@@ -64,9 +64,9 @@ cp -f src/opam ${OPAM}
 
 # Download and extract opam-repository
 cd ${ROOTDIR}
-git clone git@github.com:ocaml/opam-repository
+git clone https://github.com/ocaml/opam-repository
 cd ${ROOTDIR}/opam-repository
-git remote add ocaml git@github.com:ocaml/opam-repository
+git remote add ocaml https://github.com/ocaml/opam-repository
 git fetch ocaml
 
 # Create a local OPAM switch for opam-builder, with its dependencies
@@ -77,7 +77,7 @@ OPAMROOT=${LOCALROOT} ${OPAM} install jsonm
 
 # Download and extract opam-builder
 cd ${ROOTDIR}
-git clone git@github.com:OCamlPro/opam-builder
+git clone https://github.com/OCamlPro/opam-builder
 
 # Build opam-builder
 cd ${ROOTDIR}/opam-builder
