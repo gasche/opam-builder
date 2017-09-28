@@ -70,7 +70,7 @@ git remote add ocaml https://github.com/ocaml/opam-repository
 git fetch ocaml
 
 # Create a local OPAM switch for opam-builder, with its dependencies
-OPAMROOT=${LOCALROOT} ${OPAM} init -q
+OPAMROOT=${LOCALROOT} ${OPAM} init --comp=4.05.0 -q
 OPAMROOT=${LOCALROOT} ${OPAM} install dose3
 OPAMROOT=${LOCALROOT} ${OPAM} install ocp-build
 OPAMROOT=${LOCALROOT} ${OPAM} install jsonm
